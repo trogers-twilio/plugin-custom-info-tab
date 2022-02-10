@@ -19,7 +19,9 @@ export default class CustomInfoTabPlugin extends FlexPlugin {
    */
   async init(flex, manager) {
 
-     flex.TaskInfoPanel.Content.add(<TaskInfo key="TaskInfo" />,{ sortOrder: 0 });
+     flex.TaskInfoPanel.Content.add(<TaskInfo key="TaskInfo" />,  { sortOrder: -1 });
+
+
    }
 
 

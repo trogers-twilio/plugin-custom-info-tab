@@ -71,3 +71,23 @@ The `twilio flex:plugins:deploy` command automates the process of uploading your
 The `twilio flex:plugins:release` command is used to change which plugins are live for your users. You can group multiple plugins into a release, and you can re-activate any prior release to rollback changes.
 
 See the [Deploy and Release documentation](https://www.twilio.com/docs/flex/developer/plugins/cli/deploy-and-release) for full detailed instructions.
+
+The `twilio flex:plugins:release` command is used to change which plugins are live for your users. You can group multiple plugins into a release, and you can re-activate any prior release to rollback changes.
+
+See the [Deploy and Release documentation](https://www.twilio.com/docs/flex/developer/plugins/cli/deploy-and-release) for full detailed instructions.
+
+## How this plugin works ?
+
+This plugin will retrieve information from the studio flow and display it in the info tab of the selected task.
+
+As an example here, we have defined an attribute `test` within the studio for the voice flow and populated this attribute with some value that we wish to populate on the info tab of the task. Please see the below screenshot for reference :
+![Screenshot](./Resources/custom-info-tab.png)
+
+To accomplish the goal here, we have created a component in the file `TaskInfo.js`.
+
+This component is able to retrieve the information for the task using the withTaskContext() helper function.
+
+The withTaskContext() adds data about the selected Task to our component and more information on this can be found [here](https://www.twilio.com/docs/flex/developer/ui/add-component-context).
+
+When the information is retrieved on the info tab this is how it would appear :
+![Plugin Demo](./Resources/custom-info-tab.gif)

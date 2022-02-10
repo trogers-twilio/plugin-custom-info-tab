@@ -89,5 +89,5 @@ This component is able to retrieve the information for the task using the withTa
 
 The withTaskContext() adds data about the selected Task to our component and more information on this can be found [here](https://www.twilio.com/docs/flex/developer/ui/add-component-context).
 
-When the information is retrieved on the info tab this is how it would appear :
+When the information is retrieved on the info tab, it would be populated on the top part of the info tab as shown below :
 ![Plugin Demo](./Resources/custom-info-tab.gif)

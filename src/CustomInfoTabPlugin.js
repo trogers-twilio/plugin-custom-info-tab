@@ -1,7 +1,7 @@
 import React from 'react';
 import { VERSION } from '@twilio/flex-ui';
 import { FlexPlugin } from 'flex-plugin';
-import TaskInfo from "./components/TaskInfo";
+import CustomTaskInfo from "./components/CustomTaskInfo";
 
 const PLUGIN_NAME = 'CustomInfoTabPlugin';
 
@@ -19,7 +19,7 @@ export default class CustomInfoTabPlugin extends FlexPlugin {
    */
   async init(flex, manager) {
 
-     flex.TaskInfoPanel.Content.add(<TaskInfo key="TaskInfo" />,  { sortOrder: -1 });
+     flex.TaskInfoPanel.Content.add(<CustomTaskInfo key="CustomTaskInfo"/>,  { sortOrder: -1 });
 
 
    }

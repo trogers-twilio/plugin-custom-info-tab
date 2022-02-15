@@ -83,7 +83,7 @@ This plugin will retrieve information from the studio flow and display it in the
 As an example here, we have defined an attribute `test` within the studio for the voice flow and populated this attribute with some value that we wish to populate on the info tab of the task. Please see the below screenshot for reference :
 ![Screenshot](./Resources/custom-info-tab.png)
 
-To accomplish the goal here, we have created a component in the file `TaskInfo.js`.
+To accomplish the goal here, we have created a component in the file `CustomTaskInfo.js`.
 
 This component is able to retrieve the information for the task using the withTaskContext() helper function.
 

@@ -11,17 +11,17 @@ export default class CustomInfoTabPlugin extends FlexPlugin {
   }
 
   /**
-   * This code is run when your plugin is being started
-   * Use this to modify any UI components or attach to the actions framework
-   *
-   * @param flex { typeof import('@twilio/flex-ui') }
-   * @param manager { import('@twilio/flex-ui').Manager }
-   */
+  * This code is run when your plugin is being started
+  * Use this to modify any UI components or attach to the actions framework
+  *
+  * @param flex { typeof import('@twilio/flex-ui') }
+  * @param manager { import('@twilio/flex-ui').Manager }
+  */
   async init(flex, manager) {
+    
+    flex.TaskInfoPanel.Content.replace(<CustomTaskInfo key="custom--task-info" />);
 
-     flex.TaskInfoPanel.Content.replace(<CustomTaskInfo key="custom--task-info" />);
-     
-   }
+  }
 
 
 

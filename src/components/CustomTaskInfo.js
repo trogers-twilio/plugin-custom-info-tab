@@ -12,8 +12,7 @@ class CustomTaskInfo extends React.Component {
     //retrieve the attribute and assign it to a parameter and populate it within return()
     const { task } = this.props;
     const { attributes, taskSid, reservationSid } = task;
-    const { name, country,test } = attributes;
-    const transferReason = test;
+    const { name, from_country, transferReason } = attributes;
 
 
     return(
@@ -21,10 +20,10 @@ class CustomTaskInfo extends React.Component {
         <h1>Customer Context</h1>
         <h2>Customer Name/ Phone Number</h2>
         <p>{name}</p>
-        {country && (
+        {from_country && (
           <React.Fragment>
             <h2>Country</h2>
-            <p>{country}</p>
+            <p>{from_country}</p>
           </React.Fragment>
         )}
         <hr color='black'></hr>
@@ -32,15 +31,19 @@ class CustomTaskInfo extends React.Component {
         {transferReason && (
           <React.Fragment>
             <h2>Transfer Reason</h2>
-            <p>{test}</p>
+            <p>{transferReason}</p>
           </React.Fragment>
         )}
         <hr color='black'></hr>
         <h1>Task Context</h1>
         <h2>Task SID</h2>
         <p>{taskSid}</p>
-        <h2>Reservation SID</h2>
-        <p>{taskSid}</p>
+        {reservationSid && (
+          <React.Fragment>
+            <h2>Reservation SID</h2>
+            <p>{reservationSid}</p>
+          </React.Fragment>
+        )}
         <hr color='black'></hr>
       </React.Fragment>
 

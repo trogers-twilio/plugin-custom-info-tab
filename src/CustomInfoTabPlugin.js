@@ -1,6 +1,6 @@
 import React from 'react';
 import { VERSION } from '@twilio/flex-ui';
-import { FlexPlugin } from 'flex-plugin';
+import { FlexPlugin } from '@twilio/flex-plugin';
 import CustomTaskInfo from "./components/CustomTaskInfo";
 
 const PLUGIN_NAME = 'CustomInfoTabPlugin';
@@ -18,7 +18,7 @@ export default class CustomInfoTabPlugin extends FlexPlugin {
   * @param manager { import('@twilio/flex-ui').Manager }
   */
   async init(flex, manager) {
-    
+
     flex.TaskInfoPanel.Content.replace(<CustomTaskInfo key="custom--task-info" />);
 
   }

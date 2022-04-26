@@ -11,27 +11,31 @@ class CustomTaskInfo extends React.Component {
 
     //retrieve the attribute and assign it to a parameter and populate it within return()
     const { task } = this.props;
-    const { attributes, taskSid, reservationSid } = task;
-    const { name, from_country, transferReason } = attributes;
+    console.debug('CustomTaskInfo: props.task', task);
+    const { attributes, queueName, taskSid, sid: reservationSid } = task;
+    const { call_sid, caseNumber, name, transferReason } = attributes;
 
 
     return(
       <React.Fragment>
-        <h1>Customer Context</h1>
         <h2>Customer Name/ Phone Number</h2>
         <p>{name}</p>
-        {from_country && (
+        {queueName && (
           <React.Fragment>
-            <h2>Country</h2>
-            <p>{from_country}</p>
+            <h2>Queue</h2>
+            <p>{queueName}</p>
           </React.Fragment>
         )}
-        <hr color='black'></hr>
-        <h1>Other Information</h1>
         {transferReason && (
           <React.Fragment>
             <h2>Transfer Reason</h2>
             <p>{transferReason}</p>
+          </React.Fragment>
+        )}
+        {caseNumber && (
+          <React.Fragment>
+            <h2>Case Number</h2>
+            <p>{caseNumber}</p>
           </React.Fragment>
         )}
         <hr color='black'></hr>
@@ -42,6 +46,12 @@ class CustomTaskInfo extends React.Component {
           <React.Fragment>
             <h2>Reservation SID</h2>
             <p>{reservationSid}</p>
+          </React.Fragment>
+        )}
+        {call_sid && (
+          <React.Fragment>
+            <h2>Call SID</h2>
+            <p>{call_sid}</p>
           </React.Fragment>
         )}
         <hr color='black'></hr>

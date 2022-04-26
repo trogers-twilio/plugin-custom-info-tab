@@ -20,7 +20,7 @@ export default class CustomInfoTabPlugin extends FlexPlugin {
   async init(flex, manager) {
 
     flex.TaskInfoPanel.Content.replace(<CustomTaskInfo key="custom--task-info" />);
-
+    flex.Supervisor.TaskInfoPanel.Content.replace(<CustomTaskInfo key="custom-supervisor-task-info" />);
   }
 
 
